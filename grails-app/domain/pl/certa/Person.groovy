@@ -1,5 +1,7 @@
 package pl.certa
 
+import pl.certa.voting.VoteValue
+
 class Person {
 
 	transient springSecurityService
@@ -10,6 +12,8 @@ class Person {
 	boolean accountExpired
 	boolean accountLocked
 	boolean passwordExpired
+	
+	static hasMany = [voteValues:VoteValue]
 
 	static constraints = {
 		username blank: false, unique: true
@@ -36,5 +40,10 @@ class Person {
 
 	protected void encodePassword() {
 		password = springSecurityService.encodePassword(password)
+	}
+	
+	@Override
+	public String toString() {
+		return username;
 	}
 }

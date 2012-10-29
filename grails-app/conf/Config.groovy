@@ -94,3 +94,5 @@ log4j = {
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'pl.certa.Person'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'pl.certa.PersonAuthority'
 grails.plugins.springsecurity.authority.className = 'pl.certa.Authority'
+
+
